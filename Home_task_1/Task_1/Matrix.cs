@@ -7,6 +7,8 @@
 
         public Point[,] Cells { get; private set; }
 
+        // Порушення інкапсуляції. Ви повертаєте посилання, через яке можна доступитись до поля.
+
         public Matrix(int width, int height)
         {
             Width = width;
@@ -27,67 +29,82 @@
             //init first cell of matrix and increment value
             Cells[0, 0] = new Point(direction, value++);
 
-            int topLimit = 0,
-             bottomLimit = Height - 1,
-             leftLimit = 0,
-             rightLimit = Width - 1;
-
-            for (int col = 0, row = 0, matrixLength = 1; matrixLength < Height * Width;)
+            for (int col = 0, row = 0, matrixLength = 1, topLimit = 0, bottomLimit = Height - 1; matrixLength < Height * Width;)
             {
-                switch (direction)
-                {
-                    case Direction.Right:
-                        if (col == rightLimit || Cells[row, col + 1] != null)
-                        {
-                            direction = Direction.Down;
-                            topLimit++;
-                        }
-                        else
-                        {
-                          
-                            Cells[row, ++col] = new Point(Direction.Right, value++);
-                            matrixLength++;
-                        }
-                        break;
+                switch (Cells[row, col].Direction)
+                { // Завелика кількість умов на кожному кроці.
 
+                    case Direction.Right:
+                        if (col + 1 == Width || Cells[row, col + 1] != null)
+                        {
+                            if (row == topLimit || row != bottomLimit)
+                            {
+                                Cells[row, col].Direction = Direction.Down;
+                                topLimit++;
+                            }
+                            else
+                                Cells[row, col].Direction = Direction.Up;
+
+                            break;
+                        }
+
+                        Cells[row, ++col] = new Point(Direction.Right, value);
+                        matrixLength++;
+                        value++;
+
+                        break;
                     case Direction.Down:
                         if (row == bottomLimit || Cells[row + 1, col] != null)
                         {
-                            direction = Direction.Left;
-                        }
-                        else
-                        {
-                            Cells[++row, col] = new Point(Direction.Down, value++);
-                            matrixLength++;
-                        }
-                        break;
+                            if (col + 1 == Width || Cells[row, col + 1] != null)
+                            {
+                                Cells[row, col].Direction = Direction.Left;
+                            }
+                            else
+                                Cells[row, col].Direction = Direction.Right;
 
+                            break;
+                        }
+                        Cells[++row, col] = new Point(Direction.Down, value);
+                        matrixLength++;
+                        value++;
+
+                        break;
                     case Direction.Left:
-                        if (col == leftLimit || Cells[row, col - 1] != null)
+                        if (col == 0 || Cells[row, col - 1] != null)
                         {
-                            direction = Direction.Up;
-                            bottomLimit--;
-                        }
-                        else
-                        {
-                            Cells[row, --col] = new Point(Direction.Left, value++);
-                            matrixLength++;
-                        }
-                        break;
+                            if (row != topLimit || row == bottomLimit)
+                            {
+                                Cells[row, col].Direction = Direction.Up;
+                                bottomLimit++;
+                            }
+                            else
+                                Cells[row, col].Direction = Direction.Down;
 
+                            break;
+                        }
+                        Cells[row, --col] = new Point(Direction.Left, value);
+                        matrixLength++;
+                        value++;
+
+                        break;
                     case Direction.Up:
                         if (row == topLimit || Cells[row - 1, col] != null)
                         {
-                            direction = Direction.Right;
-                            leftLimit++;
-                        }
-                        else
-                        {
-                            Cells[--row, col] = new Point(Direction.Up, value++);
-                            matrixLength++;
-                        }
-                        break;
+                            if (col == 0 || Cells[row, col - 1] != null)
+                            {
+                                Cells[row, col].Direction = Direction.Right;
+                            }
+                            else
+                                Cells[row, col].Direction = Direction.Left;
 
+                            break;
+                        }
+                        Cells[--row, col] = new Point(Direction.Up, value);
+                        matrixLength++;
+                        value++;
+
+                        break;
                     default:
                         break;
                 }

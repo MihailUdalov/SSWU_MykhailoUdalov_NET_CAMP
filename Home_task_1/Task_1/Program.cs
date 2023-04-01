@@ -11,7 +11,7 @@ namespace Task1
                 height = ReadIntegerValue("Write matrix height: ");
 
             Matrix matrix = new Matrix(width, height);
-            matrix.Init(Direction.Down);
+            matrix.Init(Direction.Right);
             PrintMatrix(matrix);
 
             Console.Write("Press any key...");
