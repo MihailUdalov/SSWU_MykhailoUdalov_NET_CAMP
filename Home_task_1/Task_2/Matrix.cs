@@ -24,7 +24,7 @@ namespace Task_2
 
             for (int i = 0; i < Height; i++)
                 for (int j = 0; j < Width; j++)
-                    Cells[i, j] = random.Next(0, 16);
+                    Cells[i, j] = random.Next(0, 17);
         }
 
         public string GetLongestSequence()
