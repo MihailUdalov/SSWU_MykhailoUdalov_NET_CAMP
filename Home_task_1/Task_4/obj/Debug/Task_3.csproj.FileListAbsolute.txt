@@ -1,0 +1,8 @@
+E:\VisualStudioProjects\SigmaSoftware.NetCamp\Home_task_1\Task_3\Task_3\bin\Debug\Task_3.exe.config
+E:\VisualStudioProjects\SigmaSoftware.NetCamp\Home_task_1\Task_3\Task_3\bin\Debug\Task_3.exe
+E:\VisualStudioProjects\SigmaSoftware.NetCamp\Home_task_1\Task_3\Task_3\bin\Debug\Task_3.pdb
+E:\VisualStudioProjects\SigmaSoftware.NetCamp\Home_task_1\Task_3\Task_3\obj\Debug\Task_3.csproj.AssemblyReference.cache
+E:\VisualStudioProjects\SigmaSoftware.NetCamp\Home_task_1\Task_3\Task_3\obj\Debug\Task_3.csproj.SuggestedBindingRedirects.cache
+E:\VisualStudioProjects\SigmaSoftware.NetCamp\Home_task_1\Task_3\Task_3\obj\Debug\Task_3.csproj.CoreCompileInputs.cache
+E:\VisualStudioProjects\SigmaSoftware.NetCamp\Home_task_1\Task_3\Task_3\obj\Debug\Task_3.exe
+E:\VisualStudioProjects\SigmaSoftware.NetCamp\Home_task_1\Task_3\Task_3\obj\Debug\Task_3.pdb

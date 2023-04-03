@@ -4,7 +4,7 @@
     {
         public int Width { get; private set; }
         public int Height { get; private set; }
-// Порушення інкапсуляції. Ви повертаєте посилання, через яке можна доступитись до поля.
+        // Порушення інкапсуляції. Ви повертаєте посилання, через яке можна доступитись до поля.
         
         public Point[,] Cells { get; private set; }
 
