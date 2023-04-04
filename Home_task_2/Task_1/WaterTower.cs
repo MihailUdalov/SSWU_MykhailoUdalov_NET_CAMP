@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Timers;
 
@@ -7,7 +8,7 @@ namespace Task_1
     internal class WaterTower
     {
         private Timer timer;
-        private User[] users;
+        private List<User> users;
         private Pump pump;
 
         public double MaxVolume { get; set; }
