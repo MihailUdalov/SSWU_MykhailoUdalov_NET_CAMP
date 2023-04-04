@@ -8,12 +8,12 @@ namespace Task_1
     {
         private Timer timer;
         private User[] users;
-        private Pump pump { get; set; }
+        private Pump pump;
 
-        public string Name { get; set; }
-        public double MaxVolume { get; private set; }
+        public double MaxVolume { get; set; }
+        public double FeedRate { get; set; }
+        public string Name { get;private set; }  
         public double CurrentVolume { get; private set; }
-        public double FeedRate { get; private set; }
         public bool IsPumpOn { get; private set; }
 
 
@@ -66,6 +66,21 @@ namespace Task_1
         public void Work()
         {
             //TODO: start water tower work, start timer for check state each tick
+        }
+
+        public AddUser(User user)
+        {
+            //TODO: add new user
+        }
+
+        public RemoveUser(User user)
+        {
+            //TODO: remove old user
+        }
+
+        public ChangePump(Pump pump)
+        {
+            //TODO: change current pump
         }
 
         public override string ToString()
