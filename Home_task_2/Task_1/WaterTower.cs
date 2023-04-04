@@ -27,7 +27,7 @@ namespace Task_1
             MaxVolume = maxVolume;
             FeedRate = feedRate;
             this.pump = pump;
-            this.users = users;
+            this.users = users.ToList();
 
             IsPumpOn = false;
             CurrentVolume = 0;
