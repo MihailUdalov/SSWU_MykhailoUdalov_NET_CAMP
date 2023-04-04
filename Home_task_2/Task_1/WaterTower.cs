@@ -69,17 +69,17 @@ namespace Task_1
             //TODO: start water tower work, start timer for check state each tick
         }
 
-        public AddUser(User user)
+        public void AddUser(User user)
         {
             //TODO: add new user
         }
 
-        public RemoveUser(User user)
+        public void RemoveUser(User user)
         {
             //TODO: remove old user
         }
 
-        public ChangePump(Pump pump)
+        public void  ChangePump(Pump pump)
         {
             //TODO: change current pump
         }
