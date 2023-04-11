@@ -7,7 +7,7 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace Task_2
-{
+{// Хто створюватиме об'єкти вежа користувач та помпа. Користувач і вежа мають взаємодіяти... діаграми не повна і не ппродумана ще добре.
     internal class Program
     {
         static void Main(string[] args)
