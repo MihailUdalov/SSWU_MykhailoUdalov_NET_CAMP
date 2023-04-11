@@ -29,6 +29,7 @@ namespace Task_2
 
         public static string ReplaceWords(string text, string replacement)
         {// помилка в регулярці
+            //Так звісно, забув додатковий параметр додати
             Regex regex = new Regex(@"\b\w*(\w)\1\w*\b",RegexOptions.IgnoreCase);
             return regex.Replace(text, replacement);
         }
