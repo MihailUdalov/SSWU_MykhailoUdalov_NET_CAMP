@@ -28,7 +28,7 @@ namespace Task_2
         }
 
         public static string ReplaceWords(string text, string replacement)
-        {
+        {// помилка в регулярці
             Regex regex = new Regex(@"\b\w*(\w)\1\w*\b");
             return regex.Replace(text, replacement);
         }
