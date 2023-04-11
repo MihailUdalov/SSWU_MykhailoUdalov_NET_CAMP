@@ -11,8 +11,18 @@ namespace Task_1
         private const int defaultConsumptionWater = 1;
         public string Name { get; set; }
         public double ConsumptionWater { get; private set; }
+
         public double CurrentConsumptionWater { get; private set; }
-        public bool GetsWater { get; set; }
+
+        public bool GetsWater
+        {
+            get { return GetsWater; }
+            set
+            {
+                GetsWaterChanged.Invoke(this, GetsWater);
+                GetsWater = value;
+            }
+        }
 
         public event EventHandler<string> GetsWaterChanged;
 

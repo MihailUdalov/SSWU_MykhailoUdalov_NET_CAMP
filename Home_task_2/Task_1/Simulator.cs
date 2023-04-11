@@ -53,10 +53,11 @@ namespace Task_1
             users.Add(user);
         }
 
-        private static void GetsWaterChanged(object sender, string e)
+        private static void GetsWaterChanged(object sender, bool getsWater)
         {
             //TODO: Add to WaterTower
         }
+
 
         private static void InitPump()
         {

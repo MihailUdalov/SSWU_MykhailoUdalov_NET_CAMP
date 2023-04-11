@@ -1,11 +1,11 @@
 {
   "ExpandedNodes": [
     "",
+    "\\Home_task_1",
     "\\Home_task_2",
     "\\Home_task_2\\Task_1",
-    "\\Home_task_3",
     "\\Home_task_3\\Task_2"
   ],
-  "SelectedNode": "\\Home_task_3\\Task_2\\TextHandler.cs",
+  "SelectedNode": "\\Home_task_2\\Task_1\\Simulator.cs",
   "PreviewInSolutionExplorer": false
 }
