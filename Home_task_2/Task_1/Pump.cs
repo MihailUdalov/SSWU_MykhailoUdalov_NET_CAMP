@@ -2,7 +2,7 @@
 
 namespace Task_1
 {
-    internal class Pump
+    public class Pump
     {
         public string Name { get; private set; }
         public double PumpingSpeed { get; private set; }

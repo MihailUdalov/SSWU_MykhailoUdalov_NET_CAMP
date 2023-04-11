@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Timers;
 
 namespace Task_1
@@ -13,7 +15,7 @@ namespace Task_1
 
         public double MaxVolume { get; set; }
         public double FeedRate { get; set; }
-        public string Name { get;private set; }  
+        public string Name { get; private set; }
         public double CurrentVolume { get; private set; }
         public bool IsPumpOn { get; private set; }
 
@@ -21,17 +23,17 @@ namespace Task_1
         public event EventHandler<string> StateChanged;
 
 
-        public WaterTower(string name, double maxVolume, double feedRate, Pump pump, params User[] users)
+        public WaterTower(string name, double maxVolume, double feedRate, Pump pump)
         {
             Name = name;
             MaxVolume = maxVolume;
             FeedRate = feedRate;
             this.pump = pump;
-            this.users = users.ToList();
+            users = new List<User>();
 
             IsPumpOn = false;
             CurrentVolume = 0;
-            
+
         }
 
         protected void OnStateChanged(string state)
@@ -79,7 +81,7 @@ namespace Task_1
             //TODO: remove old user
         }
 
-        public void  ChangePump(Pump pump)
+        public void ChangePump(Pump pump)
         {
             //TODO: change current pump
         }
