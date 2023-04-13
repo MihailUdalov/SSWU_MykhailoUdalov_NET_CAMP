@@ -10,7 +10,7 @@ namespace Task_3
     {
         private int[] size;
         private Dimensions dimensions;
-        public Array Values { get; set; }
+        private Array Values { get; set; }
        
         public Tensor(params int[] dimensions)
         {
