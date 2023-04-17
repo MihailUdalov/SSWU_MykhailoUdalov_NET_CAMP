@@ -1,0 +1,16 @@
+E:\VisualStudioProjects\SigmaSoftware.NetCamp\Home_task_4\Task_2\Task_2\bin\Debug\Task_2.exe.config
+E:\VisualStudioProjects\SigmaSoftware.NetCamp\Home_task_4\Task_2\Task_2\bin\Debug\Task_2.exe
+E:\VisualStudioProjects\SigmaSoftware.NetCamp\Home_task_4\Task_2\Task_2\bin\Debug\Task_2.pdb
+E:\VisualStudioProjects\SigmaSoftware.NetCamp\Home_task_4\Task_2\Task_2\obj\Debug\Task_2.csproj.AssemblyReference.cache
+E:\VisualStudioProjects\SigmaSoftware.NetCamp\Home_task_4\Task_2\Task_2\obj\Debug\Task_2.csproj.SuggestedBindingRedirects.cache
+E:\VisualStudioProjects\SigmaSoftware.NetCamp\Home_task_4\Task_2\Task_2\obj\Debug\Task_2.csproj.CoreCompileInputs.cache
+E:\VisualStudioProjects\SigmaSoftware.NetCamp\Home_task_4\Task_2\Task_2\obj\Debug\Task_2.exe
+E:\VisualStudioProjects\SigmaSoftware.NetCamp\Home_task_4\Task_2\Task_2\obj\Debug\Task_2.pdb
+C:\Users\mihai\OneDrive\Desktop\Home_task_4\Task_2\Task_2\bin\Debug\Task_2.exe.config
+C:\Users\mihai\OneDrive\Desktop\Home_task_4\Task_2\Task_2\bin\Debug\Task_2.exe
+C:\Users\mihai\OneDrive\Desktop\Home_task_4\Task_2\Task_2\bin\Debug\Task_2.pdb
+C:\Users\mihai\OneDrive\Desktop\Home_task_4\Task_2\Task_2\obj\Debug\Task_2.csproj.AssemblyReference.cache
+C:\Users\mihai\OneDrive\Desktop\Home_task_4\Task_2\Task_2\obj\Debug\Task_2.csproj.SuggestedBindingRedirects.cache
+C:\Users\mihai\OneDrive\Desktop\Home_task_4\Task_2\Task_2\obj\Debug\Task_2.csproj.CoreCompileInputs.cache
+C:\Users\mihai\OneDrive\Desktop\Home_task_4\Task_2\Task_2\obj\Debug\Task_2.exe
+C:\Users\mihai\OneDrive\Desktop\Home_task_4\Task_2\Task_2\obj\Debug\Task_2.pdb
