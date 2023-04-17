@@ -7,3 +7,12 @@ C:\Users\mihai\OneDrive\Desktop\Home_task_4\Task_3\Task_3\obj\Debug\Task_3.cspro
 C:\Users\mihai\OneDrive\Desktop\Home_task_4\Task_3\Task_3\obj\Debug\Task_3.csproj.CoreCompileInputs.cache
 C:\Users\mihai\OneDrive\Desktop\Home_task_4\Task_3\Task_3\obj\Debug\Task_3.exe
 C:\Users\mihai\OneDrive\Desktop\Home_task_4\Task_3\Task_3\obj\Debug\Task_3.pdb
+E:\VisualStudioProjects\SigmaSoftware.NetCamp\Home_task_4\Task_3\bin\Debug\Data.txt
+E:\VisualStudioProjects\SigmaSoftware.NetCamp\Home_task_4\Task_3\bin\Debug\Task_3.exe.config
+E:\VisualStudioProjects\SigmaSoftware.NetCamp\Home_task_4\Task_3\bin\Debug\Task_3.exe
+E:\VisualStudioProjects\SigmaSoftware.NetCamp\Home_task_4\Task_3\bin\Debug\Task_3.pdb
+E:\VisualStudioProjects\SigmaSoftware.NetCamp\Home_task_4\Task_3\obj\Debug\Task_3.csproj.AssemblyReference.cache
+E:\VisualStudioProjects\SigmaSoftware.NetCamp\Home_task_4\Task_3\obj\Debug\Task_3.csproj.SuggestedBindingRedirects.cache
+E:\VisualStudioProjects\SigmaSoftware.NetCamp\Home_task_4\Task_3\obj\Debug\Task_3.csproj.CoreCompileInputs.cache
+E:\VisualStudioProjects\SigmaSoftware.NetCamp\Home_task_4\Task_3\obj\Debug\Task_3.exe
+E:\VisualStudioProjects\SigmaSoftware.NetCamp\Home_task_4\Task_3\obj\Debug\Task_3.pdb

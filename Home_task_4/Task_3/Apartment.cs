@@ -39,7 +39,7 @@ namespace Task_3
         public override string ToString()
         {
             int days = (int)(DateTime.Now - MeterReading.Last().Key).TotalDays;
-            return $"{ApartmentNumber,20}{OwnerLastName,25}{AmountPerQuarter,30}{days,50}";
+            return $"{ApartmentNumber,20}{OwnerLastName,25}{AmountPerQuarter,30}{days + " Last meter reading " + MeterReading.Last().Key.ToString("dd.MM.yyyy") ,50}";
         }
     }
 }
