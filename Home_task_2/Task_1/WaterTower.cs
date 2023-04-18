@@ -8,7 +8,7 @@ using System.Timers;
 namespace Task_1
 {
     internal class WaterTower
-    {
+    {// часом мав би керувати симулятор. Адже існує ймовірність, що різні екземпляри класу можуть жити в своєму часі...
         private Timer timer;
         private List<User> users;
         private Pump pump;
