@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using System.Xml.Linq;
 
 namespace Task_1
-{
+{//Шаблон одинак тут і доречний і правильно реалізований.
     public sealed class Simulator
     {
         private static Simulator simulator;
@@ -20,6 +20,7 @@ namespace Task_1
         private Simulator()
         {
             users = new List<User>();
+            //конструктор має повністю підготувати об'єкт до роботи!!!!
         }
 
         public void StartSimulator()
