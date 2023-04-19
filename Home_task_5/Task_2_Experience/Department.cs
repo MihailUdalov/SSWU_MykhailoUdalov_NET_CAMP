@@ -11,22 +11,40 @@ namespace Task2
         public List<Box<Department>> SubDepartments { get; private set; }
         public List<Box<Product>> Products { get; private set; }
 
-        public Department(string name, List<Department> subDepartments, List<Product> products)
+        public IBox Parent { get; set; }
+
+        public Department(string name, List<Department> subDepartments, List<Product> products, IBox parent = null)
         {
             Name = name;
             SubDepartments = subDepartments.Select(subDep => new Box<Department>(subDep)).ToList();
             Products = products.Select(p => new Box<Product>(p)).ToList();
+            Parent = parent;
+        }
+
+        public event EventHandler<bool> SizeUpdated;
+        protected void OnSizeUpdated()
+        {
+            SizeUpdated?.Invoke(this, true);
         }
 
         public void AddProduct(Product product)
         {
             Products.Add(new Box<Product>(product));
             SortProductsByHeight();
+            
+            UpdateSize();
+        }
+
+        public void UpdateSize()
+        {
+            OnSizeUpdated();
+            Parent?.UpdateSize();
         }
 
         public void AddSubDepartments(Department department)
         {
-            SubDepartments.Add(new Box<Department>(department));          
+            SubDepartments.Add(new Box<Department>(department));
+            UpdateSize();
         }
 
         private void SortProductsByHeight()

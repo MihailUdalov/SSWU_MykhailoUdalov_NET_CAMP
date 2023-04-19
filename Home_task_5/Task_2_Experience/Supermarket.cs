@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace Task2
@@ -8,11 +9,16 @@ namespace Task2
         public string Name { get; private set; }
         public List<Box<Department>> Boxes { get; private set; }
 
+        public IBox Parent { get => null; }
+
         public Supermarket(string name, List<Department> departments)
         {
             Name = name;
+            departments.ForEach(d => d.Parent = this);
             Boxes = departments.Select(dep => new Box<Department>(dep)).ToList();
         }
+
+        public event EventHandler<bool> SizeUpdated;
 
         public void AddDepartment(Department subDepartment, string departmentName, List<Department> rootDepartments = null)
         {
@@ -25,6 +31,7 @@ namespace Task2
             {
                 if (dep.Name == departmentName)
                 {
+                    subDepartment.Parent = dep;
                     dep.AddSubDepartments(subDepartment);
                     return;
                 }
@@ -44,6 +51,7 @@ namespace Task2
             {
                 if (dep.Name == departmentName)
                 {
+                    product.Parent = dep;
                     dep.AddProduct(product);
                     return;
                 }
@@ -64,6 +72,17 @@ namespace Task2
             double length = Boxes.Max(size => size.Lenght);
 
             return (width, height, length);
+        }
+
+        protected void OnSizeUpdated()
+        {
+            SizeUpdated?.Invoke(this, true);
+        }
+
+        public void UpdateSize()
+        {
+            OnSizeUpdated();
+            Parent?.UpdateSize();
         }
     }
 }

@@ -1,4 +1,6 @@
-﻿namespace Task2
+﻿using System;
+
+namespace Task2
 {
     internal class Box<T> where T: IBox
     {
@@ -12,12 +14,17 @@
         public Box(T value)
         {
             Value = value;
-            UpdateBoxSize();
+
+            value.SizeUpdated += Value_SizeUpdated;
+            Value_SizeUpdated(value, false);
         }
 
-        public void UpdateBoxSize()
+        private void Value_SizeUpdated(object sender, bool isParentNeedToBeUpdated)
         {
-            (Width, Height, Lenght) = Value.GetBoxSizes();
+            if (sender is IBox box && box != null)
+            {
+                (Width, Height, Lenght) = box.GetBoxSizes();
+            }
         }
 
         public override string ToString()
