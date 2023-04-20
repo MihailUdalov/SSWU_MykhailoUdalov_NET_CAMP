@@ -62,14 +62,16 @@ namespace Task2
 
         public override string ToString()
         {
-            return $"Name: {Name} | Box: {GetBoxSizes()} \n";
+            return $"Name: {Name} | Box: {GetBoxSizes()} \n" +
+                  $"{string.Join("\n", Boxes.Select(d => d.GetDepartmentDescription(1)))}";
+            //  return $"Name: {Name} | Box: {GetBoxSizes()} \n";
         }
 
         public (double width, double height, double length) GetBoxSizes()
         {
             double width = Boxes.Max(size => size.Width);
             double height = Boxes.Max(size => size.Height);
-            double length = Boxes.Max(size => size.Lenght);
+            double length = Boxes.Sum(size => size.Lenght);
 
             return (width, height, length);
         }

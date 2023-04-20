@@ -52,19 +52,21 @@ namespace Task2
             Products = Products.OrderBy(p => p.Height).ToList();
         }
 
-        public string ShowDepartment(int level = 0)
+        public string GetDepartmentDescription(int level = 0)
         {
             string indent = new string('\t', level * 2);
             StringBuilder sb = new StringBuilder();
 
-            //sb.AppendLine($"{indent}Department: {Name} | Box: {Box}");
-            //sb.AppendLine($"{indent}Products:");
+            sb.AppendLine($"{indent}Department: {Name} | Box: {GetBoxSizes()}");
+            sb.AppendLine($"{indent}Products:");
 
-            //foreach (var product in Products)
-            //    sb.AppendLine(product.ShowProduct(level));
+            foreach (var product in Products)
+                sb.AppendLine(product.GetProductDescription(level));
 
-            //foreach (var subDepartment in SubDepartments)
-            //    sb.AppendLine(subDepartment.ShowDepartment(level + 1));
+
+            foreach (var subDepartment in SubDepartments)
+                sb.AppendLine(subDepartment.GetDepartmentDescription(level + 1));
+
 
             return sb.ToString();
         }
@@ -79,14 +81,14 @@ namespace Task2
             {
                 width = SubDepartments.Max(size => size.Width);
                 height = SubDepartments.Max(size => size.Height);
-                length = SubDepartments.Max(size => size.Lenght);
+                length = SubDepartments.Sum(size => size.Lenght);
             }
 
             if (Products.Count > 0)
             {
                 width = Math.Max(width, Products.Max(size => size.Width));
                 height = Math.Max(height, Products.Max(size => size.Height));
-                length = Math.Max(length, Products.Max(size => size.Lenght));
+                length = length + Products.Sum(size => size.Lenght);
             }
 
             return (width, height, length);

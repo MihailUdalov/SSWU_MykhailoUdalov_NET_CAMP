@@ -18,14 +18,16 @@ namespace Task_3
             {
                 this.dimensions = Dimensions.Scalar;
                 size = new int[1];
+                Values = Array.CreateInstance(typeof(int), 1);
             }
             else
             {
                 this.dimensions = (Dimensions)dimensions.Length;
                 size = dimensions;
+                Values = Array.CreateInstance(typeof(int), size);
             }
               
-            Values = Array.CreateInstance(typeof(int), size);
+           
         }
 
         public int this[params int[] index]

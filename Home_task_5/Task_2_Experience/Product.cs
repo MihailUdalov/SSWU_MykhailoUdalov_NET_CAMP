@@ -33,6 +33,13 @@ namespace Task2
             Parent?.UpdateSize();
         }
 
+        public string GetProductDescription(int level = 0)
+        {
+            string indent = new string('\t', level * 2);
+
+            return $"{indent}Name: {Name} | Box: {GetBoxSizes()}";
+        }
+
         public (double width, double height, double length) GetBoxSizes()
         {
             return (++Width, ++Height, ++Length);
