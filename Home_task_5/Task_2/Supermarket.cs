@@ -2,7 +2,7 @@
 using System.Linq;
 
 namespace Task2
-{
+{// супермаркет-це мав би бути просто департамент 0 рівня.
     internal class Supermarket
     {
         public string Name { get; private set; }
@@ -15,7 +15,7 @@ namespace Task2
             Departments = departments;
             CreateBox();
         }
-
+// Не продумано до кінця систему обходу по ієрархічній структурі.
         public void AddDepartment(Department subDepartment, string departmentName, List<Department> rootDepartments = null)
         {
             if (departmentName == "")
