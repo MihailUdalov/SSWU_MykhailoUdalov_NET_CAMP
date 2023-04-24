@@ -4,9 +4,9 @@ using System.IO;
 namespace Task_3
 {
     internal class Program
-    {
+    {// дата на виведенні мала містити назву місяця
         static void Main(string[] args)
-        {
+        {// не пояснені чарівні константи
             Console.SetWindowSize(200, 40);
 
             string[] text = File.ReadAllLines("Data.txt");
