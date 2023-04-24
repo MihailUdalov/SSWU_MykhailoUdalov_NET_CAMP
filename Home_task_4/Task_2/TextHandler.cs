@@ -81,7 +81,7 @@ namespace Task_2
             return words;
         }
         private static bool IsValidEmailWithRegex(string email)
-        {
+        {{// цей регулярний вираз не враховує повністю вимоги. які є в нас.
             Regex emailRegex = new Regex(@"^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]{2,5}){1,2}$");
 
             return emailRegex.Match(email).Value != "";
@@ -97,7 +97,7 @@ namespace Task_2
             {
                 return false;
             }
-
+// Немає врахування обмежень на довжину.
             if (string.IsNullOrEmpty(parts.First()) || string.IsNullOrEmpty(parts.Last()))
             {
                 return false;
