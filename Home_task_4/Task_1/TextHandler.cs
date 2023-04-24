@@ -20,7 +20,7 @@ namespace Task_1
 
             return sentences.Where(item => item.Contains('(') && item.Contains(')')).ToArray();
         }
-
+//можна простіше.
         private void CreateSentence(string[] text, ref int index, List<string> sentences)
         {
             string[] parts = text[index].Split(endingPunctuationMarks, StringSplitOptions.RemoveEmptyEntries);
