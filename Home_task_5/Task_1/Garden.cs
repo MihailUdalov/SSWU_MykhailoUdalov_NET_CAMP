@@ -16,7 +16,7 @@ namespace Task_1
         {
             Trees.Add(new Point(x, y));
         }
-
+// потрібно спочатку знайти точки, які будуть утворювати опуклу оболонку і вже з них вибудовувати периметр
         public double GetFenceLength()
         {
             List<Point> fencePoints = FencePlanner.GetFenchPoint(Trees);
