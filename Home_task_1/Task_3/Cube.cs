@@ -89,7 +89,7 @@ namespace Task_4
                 for (int y = 0; y < Size; y++)
                 {
                     for (int z = 0; z < Size; z++)
-                    {
+                    {// алгоритмічно не правильно.Зафіксуйте координати x, рухаючись по z Ви додасте скільки разів пару, скільки єнульових точок на цій лінії. а це не правильно.
                         if (z == 0 && Points[x, y, z] == null && Points[x, y, Size - 1] == null)
                         {
                             lines.Add(new Line(new Point(x, y, 0), new Point(x, y, Size - 1)));
