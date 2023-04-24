@@ -7,7 +7,8 @@ using System.Threading.Tasks;
 namespace Task_3
 {
     internal class Tensor
-    {
+    {// Вхідні дані не захищені від помилок.
+        // Ви не можете в тензор присвоїти масив.
         private int[] size;
         private Dimensions dimensions;
         private Array Values { get; set; }
