@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+//Mykhail	Udalov	90	5	15	95	85	75	50	89. Вітаю Вас у 2 турі.
 namespace Task_1
 {
     internal class Program
