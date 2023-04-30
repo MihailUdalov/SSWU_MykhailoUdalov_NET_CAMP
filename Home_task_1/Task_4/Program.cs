@@ -7,7 +7,7 @@
             Tensor scalar = new Tensor();
             scalar[0] = 5;
 
-            Tensor vector = new Tensor(3);
+            Tensor vector = new Tensor(10);
             vector[0] = 5;
             vector[1] = 5;
             vector[2] = 5;
