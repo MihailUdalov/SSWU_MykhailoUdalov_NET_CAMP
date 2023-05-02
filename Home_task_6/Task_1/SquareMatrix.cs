@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace Task_1
 {
     internal class SquareMatrix : IEnumerable<int>
-    {
+    {// вже замучилась це коментувати. Зрізаю бали.
         public int[,] Values { get; set; }
 
         public SquareMatrix(int n)
@@ -40,7 +40,7 @@ namespace Task_1
                 yield return Values[0, 0];
                 yield break;
             }
-
+// у нас весь час буде генеруватись верхній лівий елемент!!!!
             yield return Values[0, 0];
 
             int i =0,
