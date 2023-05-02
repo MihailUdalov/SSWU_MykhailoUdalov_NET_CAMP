@@ -20,7 +20,8 @@ namespace Task_2
         }
 
         static IEnumerable<int[]> ConcatAndSort(params int[][] arrays)
-        {
+        {// не правильна ідеологія застосування yield.
+            // Select і ToArray() тут лишні
             yield return arrays.SelectMany(ar => ar).Select(v => v)
                     .OrderByDescending(v => v).ToArray();
             yield break;
