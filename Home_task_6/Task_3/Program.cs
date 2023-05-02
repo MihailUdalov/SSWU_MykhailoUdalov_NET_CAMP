@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-
+// Сумарний бал -80
 namespace Task_3
 {
     internal class Program
