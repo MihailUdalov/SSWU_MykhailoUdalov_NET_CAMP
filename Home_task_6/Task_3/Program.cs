@@ -29,6 +29,7 @@ namespace Task_3
             IEnumerable<string> Range(string array)
             {
                 string[] separators = new string[] { " ", ".", ",", "!", "?", "\r", "\n", ")", "(" };
+                 // в linq є окремий метод для унікальних елементів)
                 var uniqeWords = array.Split(separators, StringSplitOptions.RemoveEmptyEntries)
                     .Select(x => x.ToLower())
                     .GroupBy(x => x)
