@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace Task_1
 {
     internal class SquareMatrix : IEnumerable<int>
-    {// вже замучилась це коментувати. Зрізаю бали.
+    {   // вже замучилась це коментувати. Зрізаю бали.
         public int[,] Values { get; set; }
 
         public SquareMatrix(int n)
@@ -21,6 +21,7 @@ namespace Task_1
         {
             Values = array;
         }
+
         private void InitValues()
         {
             Random random = new Random();
