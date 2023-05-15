@@ -10,7 +10,7 @@ namespace Task_1
 
         public event Action<Line> LineChanged;
 
-        public Line(string name,TrafficLight trafficLight = null, double width = 2.5d)
+        public Line(string name, TrafficLight trafficLight = null, double width = 2.5d)
         {
             Name = name;
             Width = width;
@@ -19,7 +19,7 @@ namespace Task_1
                 TrafficLight = trafficLight;
                 TrafficLight.StateChanged += TrafficLight_StateChanged;
             }
-            
+
         }
 
         private void TrafficLight_StateChanged(TrafficLight obj)
