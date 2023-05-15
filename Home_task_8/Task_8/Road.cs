@@ -8,7 +8,7 @@ namespace Task_1
         public List<Line> Lines { get; private set; }
         public TrafficLight TrafficLight { get; private set; }
 
-        public Road(string name,TrafficLight trafficLight, int countLines)
+        public Road(string name, TrafficLight trafficLight, int countLines)
         {
             Name = name;
             TrafficLight = trafficLight;
@@ -60,7 +60,7 @@ namespace Task_1
         public void AssignTrafficLight(int currentLine, TrafficLight trafficLight)
         {
             if (Lines.Count < currentLine && currentLine > -1)
-                Lines[currentLine] = new Line(currentLine.ToString(),trafficLight);
+                Lines[currentLine] = new Line(currentLine.ToString(), trafficLight);
         }
 
         public override string ToString()
@@ -68,10 +68,10 @@ namespace Task_1
             string lineNotification = "";
             foreach (var line in Lines)
             {
-                if(line.TrafficLight !=  null)
+                if (line.TrafficLight != null)
                     lineNotification += line.ToString();
                 else
-                 lineNotification += $"Number: {line.Name} TrafficLight: {TrafficLight}";
+                    lineNotification += $"Number: {line.Name} TrafficLight: {TrafficLight}";
 
                 lineNotification += "\n";
             }
