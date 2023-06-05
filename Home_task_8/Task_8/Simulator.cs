@@ -21,7 +21,7 @@ namespace Task_1
             Road westEast = new Road("WestEast", new TrafficLight(), 2);
             parallelCross = new ParallelCrossRoad("ParallelCross", northSouth, southNorth, eastWest, westEast);
         }
-
+        
         public void Start()
         {
             crossRoadManager.Work();
